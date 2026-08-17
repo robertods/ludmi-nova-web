@@ -3,104 +3,172 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Ludmi Nova</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-      background: #f6dce9;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #ffffff;
-    }
-
-    main {
-      position: relative;
-      width: 100%;
-      max-width: 1100px;
-      height: min(760px, calc(100vh - 48px));
-      min-height: 520px;
-      overflow: hidden;
-      border-radius: 28px;
-      background-image: url("ludmila.png");
-      background-position: center;
-      background-size: cover;
-      box-shadow: 0 24px 70px rgba(70, 25, 52, 0.25);
-    }
-
-    main::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(
-          to top,
-          rgba(20, 8, 16, 0.72),
-          rgba(20, 8, 16, 0.08) 55%,
-          rgba(20, 8, 16, 0.05)
-        );
-    }
-
-    .content {
-      position: absolute;
-      z-index: 1;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      padding: 48px;
-      text-align: center;
-    }
-
-    h1 {
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(46px, 8vw, 92px);
-      font-weight: normal;
-      line-height: 1;
-      text-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
-    }
-
-    p {
-      margin: 20px 0 0;
-      font-size: clamp(15px, 2vw, 20px);
-      letter-spacing: 5px;
-      text-transform: uppercase;
-      text-shadow: 0 3px 16px rgba(0, 0, 0, 0.5);
-    }
-
-    @media (max-width: 600px) {
-      body {
-        padding: 0;
-      }
-
-      main {
-        height: 100vh;
-        min-height: 100vh;
-        border-radius: 0;
-      }
-
-      .content {
-        padding: 38px 24px;
-      }
-    }
-  </style>
+  <meta name="description" content="Web oficial de Ludmi Nova. Musica, novedades y redes sociales.">
+  <meta property="og:title" content="Ludmi Nova">
+  <meta property="og:description" content="Musica, novedades y redes sociales de Ludmi Nova.">
+  <meta property="og:image" content="ludmila.png">
+  <meta property="og:type" content="website">
+  <title>Ludmi Nova | Sitio oficial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+  <div class="floating-layer" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Ir al inicio">
+      <span class="brand-mark">
+        <img src="profile.png" alt="">
+      </span>
+      <span class="brand-name">Ludmi Nova</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Navegacion principal">
+      <a href="#redes">Redes</a>
+      <a href="#musica">Musica</a>
+      <a href="#bio">Bio</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
   <main>
-    <div class="content">
-      <h1>Ludmi Nova</h1>
-      <p>Próximamente...</p>
-    </div>
+    <section class="hero" id="inicio">
+      <div class="hero-media" aria-label="Retrato de Ludmi Nova"></div>
+      <div class="hero-copy">
+        <img class="hero-logo" src="ludmi-logo-white-cropped.png" alt="Ludmi Nova">
+        <p class="eyebrow">Pop dulce, brillo propio y nuevas canciones en camino</p>
+        <p class="hero-text">
+          Artista digital en crecimiento: novedades, contenido exclusivo y todos los enlaces para seguir de cerca cada lanzamiento.
+        </p>
+        <div class="hero-actions" aria-label="Acciones principales">
+          <a class="button primary" href="#redes">Seguir a Ludmi</a>
+          <a class="button secondary" href="#musica">Ver novedades</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="redes">
+      <div class="section-heading">
+        <p class="eyebrow">Conecta</p>
+        <h2>Redes oficiales</h2>
+      </div>
+
+      <div class="social-grid">
+        <a class="social-link instagram" href="https://www.instagram.com/ludmi.nova" target="_blank" rel="noopener">
+          <span class="social-icon" aria-hidden="true">
+            <img src="instagram.png" alt="">
+          </span>
+          <span>
+            <strong>Instagram</strong>
+            <small>Fotos, stories y novedades</small>
+          </span>
+        </a>
+
+        <a class="social-link youtube" href="https://www.youtube.com/@ludminova" target="_blank" rel="noopener">
+          <span class="social-icon" aria-hidden="true">
+            <img src="youtube.png" alt="">
+          </span>
+          <span>
+            <strong>YouTube</strong>
+            <small>Videos y futuros estrenos</small>
+          </span>
+        </a>
+        
+        <a class="social-link tiktok" href="https://www.tiktok.com/@ludmi.nova" target="_blank" rel="noopener">
+          <span class="social-icon" aria-hidden="true">
+            <img src="tiktok.png" alt="">
+          </span>
+          <span>
+            <strong>TikTok</strong>
+            <small>Clips, trends y backstage</small>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section class="music-section" id="musica">
+      <div class="section-heading">
+        <p class="eyebrow">Proximamente</p>
+        <h2>Musica y lanzamientos</h2>
+      </div>
+
+      <div class="release-panel">
+        <div>
+          <p class="release-label">Primer single</p>
+          <h3>Nueva etapa en camino</h3>
+          <p>
+            Muy pronto este espacio tendra fechas, portadas, links de pre-save y plataformas de escucha.
+          </p>
+        </div>
+        <!--<a class="button secondary compact" href="#contacto">Recibir novedades</a>-->
+      </div>
+    </section>
+
+    <section class="bio-section" id="bio">
+      <div class="section-heading">
+        <p class="eyebrow">Bio</p>
+        <h2>Ficha Nova</h2>
+      </div>
+
+      <div class="bio-content">
+        <div class="bio-copy">
+          <p><strong>Ludmi Nova</strong> es el nombre artístico de Ludmila Antonova, cantautora pop nacida un 5 de octubre.</p>
+          <p>Escribe canciones como quien llena las páginas de un diario: historias de amor, desencuentros, inseguridades y esos pequeños dramas que, con un poco de distancia, también pueden dar risa.</p>
+          <p>Cuando no está haciendo música, probablemente esté viendo un K-drama, sacando fotos de cosas que le parecieron lindas o comprando algo rosa que definitivamente no necesitaba.</p>
+          <p>Le gustan los vestidos, los moños, los perfumes, las flores y arreglarse incluso cuando no tiene ningún lugar especial al que ir. Tiene un gato blanco llamado <em>Nube</em>, que considera suyo aunque Nube probablemente tenga otra opinión.</p>
+          <p>Su planeta favorito es <em>Saturno</em>. No sabe demasiado de astronomía, pero sostiene que eso es completamente irrelevante.</p>
+          <p>🪐 El mundo es ficción. La música es real.</p>
+        </div>
+
+        <dl class="bio-facts" aria-label="Ficha breve de Ludmi Nova">
+          <div>
+            <dt>Signo</dt>
+            <dd>Libra ♎️</dd>
+          </div>
+          <div>
+            <dt>Altura</dt>
+            <dd>1,58 m</dd>
+          </div>
+          <div>
+            <dt>Color favorito</dt>
+            <dd>Rosa cereza 🍒</dd>
+          </div>
+          <div>
+            <dt>Comida favorita</dt>
+            <dd>Pasta al pesto 🌿</dd>
+          </div>
+          <div>
+            <dt>Manía</dt>
+            <dd>Ponerse un poco de perfume aunque solo vaya al supermercado</dd>
+          </div>
+          <div>
+            <dt>Talento inútil</dt>
+            <dd>Llegar tarde por cambiar de outfit cuando ya estaba lista</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contacto">
+      <div class="contact-copy">
+        <p class="eyebrow">Contacto</p>
+        <h2>Prensa y colaboraciones</h2>
+        <p>
+          Para propuestas profesionales, campañas, prensa o colaboraciones digitales, déjame tu mensaje
+        </p>
+      </div>
+      <a class="button primary" href="mailto:hola@ludminova.com">hola@ludminova.com</a>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <span>Ludmi Nova</span>
+    <span>&copy; <span id="year"></span></span>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
