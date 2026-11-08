@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Web oficial de Ludmi Nova. Musica, novedades y redes sociales.">
+  <meta name="description" content="Web oficial de Ludmi Nova. Escucha Odio y No me di cuenta en todas las plataformas.">
   <meta property="og:title" content="Ludmi Nova">
-  <meta property="og:description" content="Musica, novedades y redes sociales de Ludmi Nova.">
+  <meta property="og:description" content="Escucha Odio y No me di cuenta, los nuevos singles de Ludmi Nova.">
   <meta property="og:image" content="ludmila.png">
   <meta property="og:type" content="website">
   <title>Ludmi Nova | Sitio oficial</title>
@@ -28,9 +28,9 @@
 
     <nav class="site-nav" aria-label="Navegacion principal">
       <a href="#redes">Redes</a>
-      <a href="#musica">Musica</a>
-      <a href="#bio">Bio</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#musica">Música</a>
+      <a class="nav-secondary" href="#bio">Bio</a>
+      <a class="nav-secondary" href="#contacto">Contacto</a>
     </nav>
   </header>
 
@@ -39,13 +39,29 @@
       <div class="hero-media" aria-label="Retrato de Ludmi Nova"></div>
       <div class="hero-copy">
         <img class="hero-logo" src="ludmi-logo-white-cropped.png" alt="Ludmi Nova">
-        <p class="eyebrow">Pop dulce, brillo propio y nuevas canciones en camino</p>
+        <p class="eyebrow">Odio y No me di cuenta ya disponibles</p>
         <p class="hero-text">
-          Artista digital en crecimiento: novedades, contenido exclusivo y todos los enlaces para seguir de cerca cada lanzamiento.
+          Escucha la música de Ludmi Nova en tu plataforma favorita y descubre sus nuevos lanzamientos.
         </p>
-        <div class="hero-actions" aria-label="Acciones principales">
-          <a class="button primary" href="#redes">Seguir a Ludmi</a>
-          <a class="button secondary" href="#musica">Ver novedades</a>
+        <div class="platform-links" aria-label="Escuchar a Ludmi Nova">
+          <a class="platform-link spotify" href="https://open.spotify.com/artist/61vV1dUsL8QUnTantv7mqs" target="_blank" rel="noopener">
+            <span class="platform-mark" aria-hidden="true">
+              <img src="spotify.webp" alt="">
+            </span>
+            <span>Spotify</span>
+          </a>
+          <a class="platform-link apple-music" href="https://music.apple.com/us/artist/ludmi-nova/6817929534" target="_blank" rel="noopener">
+            <span class="platform-mark" aria-hidden="true">
+              <img src="Apple_Music.webp" alt="">
+            </span>
+            <span>Apple Music</span>
+          </a>
+          <a class="platform-link youtube-music" href="https://music.youtube.com/channel/UCxkESrXqK8tynkrMWb6VQ-g" target="_blank" rel="noopener">
+            <span class="platform-mark" aria-hidden="true">
+              <img src="Youtube_Music.webp" alt="">
+            </span>
+            <span>YouTube Music</span>
+          </a>
         </div>
       </div>
     </section>
@@ -67,7 +83,7 @@
           </span>
         </a>
 
-        <a class="social-link youtube" href="https://www.youtube.com/@ludminova" target="_blank" rel="noopener">
+        <a class="social-link youtube" href="https://www.youtube.com/@LudmiNova" target="_blank" rel="noopener">
           <span class="social-icon" aria-hidden="true">
             <img src="youtube.png" alt="">
           </span>
@@ -91,19 +107,43 @@
 
     <section class="music-section" id="musica">
       <div class="section-heading">
-        <p class="eyebrow">Proximamente</p>
-        <h2>Musica y lanzamientos</h2>
+        <p class="eyebrow">Disponible ahora</p>
+        <h2>Música y lanzamientos</h2>
       </div>
 
-      <div class="release-panel">
-        <div>
-          <p class="release-label">Primer single</p>
-          <h3>Nueva etapa en camino</h3>
-          <p>
-            Muy pronto este espacio tendra fechas, portadas, links de pre-save y plataformas de escucha.
-          </p>
-        </div>
-        <!--<a class="button secondary compact" href="#contacto">Recibir novedades</a>-->
+      <div class="release-grid">
+        <!-- Próximo lanzamiento: activar cuando Saturno esté disponible.
+        <article class="release-card">
+          <img src="covers/saturno.jpg" alt="Portada del álbum Saturno de Ludmi Nova">
+          <div class="release-card-copy">
+            <p class="release-label">Álbum</p>
+            <h3>Saturno</h3>
+            <span class="release-link disabled">Próximamente</span>
+          </div>
+        </article>
+        -->
+
+        <article class="release-card">
+          <img src="covers/no-me-di-cuenta.jpg" alt="Portada del single No me di cuenta de Ludmi Nova">
+          <div class="release-card-copy">
+            <p class="release-label">Single</p>
+            <h3>No me di cuenta</h3>
+            <a class="release-link" href="https://open.spotify.com/album/0laAtT0PfIz697r0fWM4JP" target="_blank" rel="noopener">
+              Escuchar en Spotify
+            </a>
+          </div>
+        </article>
+
+        <article class="release-card">
+          <img src="covers/odio.jpg" alt="Portada del single Odio de Ludmi Nova">
+          <div class="release-card-copy">
+            <p class="release-label">Single</p>
+            <h3>Odio</h3>
+            <a class="release-link" href="https://open.spotify.com/album/5kpxJLN15iuKb02TG0Wa1s" target="_blank" rel="noopener">
+              Escuchar en Spotify
+            </a>
+          </div>
+        </article>
       </div>
     </section>
 
