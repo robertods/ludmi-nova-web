@@ -495,6 +495,7 @@ h3 {
   min-height: 42px;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   border-radius: 999px;
   padding: 10px 15px;
   background: var(--ink);
@@ -502,6 +503,14 @@ h3 {
   font-size: 13px;
   font-weight: 800;
   transition: transform 180ms ease, background 180ms ease;
+}
+
+.release-link-icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .release-link:hover,
@@ -607,15 +616,14 @@ h3 {
   }
 
   .hero {
-    min-height: 720px;
+    height: calc(100svh - 92px);
+    min-height: 560px;
+    max-height: 720px;
     border-radius: 24px;
   }
 
   .hero-media {
-    /*background-image:
-    linear-gradient(90deg, rgba(40, 24, 36, 0.82) 0%, rgba(40, 24, 36, 0.58) 36%, rgba(40, 24, 36, 0.05) 68%),
-    linear-gradient(0deg, rgba(40, 24, 36, 0.72), rgba(40, 24, 36, 0.04) 44%),
-    url("ludmila.png");*/
+    background-image: url("ludmila.png");
     background-position: 42% center;
     background-size: cover;
   }
@@ -723,8 +731,42 @@ h3 {
 }
 
 @media (max-width: 420px) {
-  .site-nav .nav-secondary {
-    display: none;
+  .site-header {
+    gap: 6px;
+    padding: 8px 10px;
+  }
+
+  .brand {
+    flex: 0 0 auto;
+  }
+
+  .brand-mark {
+    width: 40px;
+    height: 40px;
+  }
+
+  .site-nav {
+    flex: 1;
+    justify-content: flex-end;
+    gap: 0;
+  }
+
+  .site-nav a {
+    min-height: 34px;
+    padding: 8px 5px;
+    font-size: 11px;
+  }
+
+  main {
+    padding-top: 70px;
+  }
+
+  .hero {
+    height: calc(100svh - 80px);
+  }
+
+  main > section {
+    scroll-margin-top: 82px;
   }
 }
 
