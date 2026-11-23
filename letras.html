@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Letras de las canciones de Ludmi Nova.">
+  <meta property="og:title" content="Letras | Ludmi Nova">
+  <meta property="og:description" content="Encuentra las letras de todas las canciones de Ludmi Nova.">
+  <meta property="og:image" content="ludmila.png">
+  <meta property="og:type" content="website">
+  <title>Letras | Ludmi Nova</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css?v=20261123-2">
+</head>
+<body class="lyrics-page">
+  <div class="floating-layer" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html#inicio" aria-label="Ir al inicio">
+      <span class="brand-mark">
+        <img src="profile.png" alt="">
+      </span>
+      <span class="brand-name">Ludmi Nova</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Navegación principal">
+      <a href="index.html#inicio">Inicio</a>
+      <a href="index.html#musica">Música</a>
+      <a href="letras.html" aria-current="page">Letras</a>
+      <a class="nav-secondary" href="index.html#bio">Bio</a>
+      <a class="nav-secondary" href="index.html#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="lyrics-intro" aria-labelledby="lyrics-title">
+      <p class="eyebrow">Canción por canción</p>
+      <h1 id="lyrics-title">Letras</h1>
+      <p>Explora las canciones de Ludmi Nova y encuentra la letra que estabas buscando.</p>
+    </section>
+
+    <section class="lyrics-browser" aria-label="Letras de canciones">
+      <aside class="lyrics-directory" aria-label="Listado de canciones">
+        <h2>Canciones</h2>
+        <label class="sr-only" for="lyrics-search">Buscar una canción</label>
+        <input class="lyrics-search" id="lyrics-search" type="search" placeholder="Buscar canción" autocomplete="off">
+        <label class="sr-only" for="song-picker">Elegir una canción</label>
+        <select class="song-picker" id="song-picker" aria-label="Elegir una canción"></select>
+        <div class="song-list" id="song-list"></div>
+      </aside>
+
+      <article class="lyric-view" id="letra" aria-live="polite">
+        <p class="lyrics-loading">Cargando letras…</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Ludmi Nova</span>
+    <span>&copy; <span id="year"></span></span>
+  </footer>
+
+  <script src="lyrics-data.js?v=20261123-1"></script>
+  <script src="script.js?v=20261123-2"></script>
+  <script src="lyrics.js?v=20261123-1"></script>
+</body>
+</html>

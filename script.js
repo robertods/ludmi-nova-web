@@ -36,3 +36,44 @@ function createFloatingItem(index) {
 if (floatingLayer && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   Array.from({ length: 11 }, (_, index) => createFloatingItem(index));
 }
+
+const releaseCovers = document.querySelectorAll(".release-card > img");
+
+if (releaseCovers.length) {
+  const coverDialog = document.createElement("dialog");
+  coverDialog.className = "cover-dialog";
+  coverDialog.setAttribute("aria-label", "Portada ampliada");
+  coverDialog.innerHTML = `
+    <button class="cover-dialog-close" type="button" aria-label="Cerrar portada">&times;</button>
+    <img class="cover-dialog-image" src="" alt="">
+  `;
+  document.body.appendChild(coverDialog);
+
+  const dialogImage = coverDialog.querySelector(".cover-dialog-image");
+  const closeButton = coverDialog.querySelector(".cover-dialog-close");
+
+  function openCover(image) {
+    dialogImage.src = image.currentSrc || image.src;
+    dialogImage.alt = image.alt;
+    coverDialog.showModal();
+  }
+
+  releaseCovers.forEach((image) => {
+    image.tabIndex = 0;
+    image.setAttribute("role", "button");
+    image.setAttribute("aria-label", `Ampliar ${image.alt}`);
+
+    image.addEventListener("click", () => openCover(image));
+    image.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openCover(image);
+      }
+    });
+  });
+
+  closeButton.addEventListener("click", () => coverDialog.close());
+  coverDialog.addEventListener("click", (event) => {
+    if (event.target === coverDialog) coverDialog.close();
+  });
+}
